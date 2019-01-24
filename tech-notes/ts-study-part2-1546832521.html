@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=https://shuoit.net/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=https://shuoit.net">
+<meta name="author" content="唐先森(https://www.tangkunyin.com)">
+<link rel="stylesheet" href="/css/JSimple.css">
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>typescript入坑篇2 - 说IT</title>
+
+<meta name="keywords" content="typescript, tslang">
+
+<meta name="description " content="TypeScript入坑笔记第二篇。这一部分记录下编码规范和一些简单的语法问题。">
+
+    
+    <!-- 自动广告 -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-4837253996935841",
+            enable_page_level_ads: true
+        });
+    </script>
+
+
+    
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="//www.googletagmanager.com/gtag/js?id=UA-131527701-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-131527701-1');
+        </script>
+    
+    <!-- put your likes here. -->
+
+
+</head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>首页</span></a>
+        <a href="/archives" title="归档"><i class="fa fa-archives"></i><span>归档</span></a>
+        <a href="/tags" title="标签"><i class="fa fa-tags"></i><span>标签</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-telegram"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">说IT</h1>
+        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
+        <p class="cover-siteDesc">一个关注技术与人文的IT博客</p>
+        <div class="cover-sns">
+            
+            <div class="btn btn-telegram">
+                <a href="http://t.me/kunyintang" target="_blank" title="telegram" ref="friend">
+                    <i class="fa fa-telegram"></i>
+                </a>
+            </div>
+            
+            <div class="btn btn-instagram">
+                <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+            
+            <div class="btn btn-twitter">
+                <a href="https://twitter.com/tangkunyin" target="_blank" title="twitter" ref="friend">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+            
+            <div class="btn btn-github">
+                <a href="https://github.com/tangkunyin" target="_blank" title="github" ref="friend">
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">最近</a></li>
+        
+            
+                <li class="active">
+                    <a href="/categories/tech-notes" data-name="技术">技术</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/humanities" data-name="人文">人文</a>
+                </li>
+            
+                <li class="">
+                    <a href="/categories/others" data-name="其他">其他</a>
+                </li>
+            
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text" readonly="readonly" id="local-search-input-tip" placeholder="读物检索~">
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://www.tangkunyin.com" target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar">
+                </a>
+                <p><span class="label">作者</span>
+                    <a href="https://about.tangkunyin.com" target="_blank">唐先森</a>
+                    <span title="最后编辑于&nbsp;2019-01-07">2019-01-07</span>
+                </p>
+                <p>一个写代码的「伪文人」</p>
+            </div>
+            <h2 class="post-title">Typescript入坑篇2</h2>
+            <div class="post-meta">
+                本文共计2955个字 |
+                您是第&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>位看到它们的小伙伴
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="规范相关"><a href="#规范相关" class="headerlink" title="规范相关"></a>规范相关</h3><blockquote>
+<p>题外话，今天突然意识到文章英文标题好像有点怪…<code>ts-study</code>，当时为啥不写成<code>ts-learning</code>呢，明显感觉后者读起来更爽口啊😂️</p>
+</blockquote>
+<p>资料：</p>
+<ul>
+<li><a href="https://shuoit.net/tech-notes/ts-study-part1-1528259629.html">入坑篇1（前置操作）</a></li>
+<li><a href="https://juejin.im/post/5b3859a36fb9a00e4d53fc85">自定义 tslint &amp; eslint 详细规则</a></li>
+<li><a href="https://www.tslang.cn/docs/handbook/basic-types.html">官方语法基础</a></li>
+<li><a href="https://semlinker.com/ts-intro-and-guide/">Typescript Guidelines</a></li>
+<li><a href="https://zhongsp.gitbooks.io/typescript-handbook/">TypeScript Handbook（中文版）</a></li>
+<li><a href="https://jkchao.github.io/typescript-book-chinese/">深入理解 TypeScript</a></li>
+<li><a href="https://github.com/semlinker/awesome-typescript">awesome-typescript</a></li>
+</ul>
+<h3 id="编码相关"><a href="#编码相关" class="headerlink" title="编码相关"></a>编码相关</h3><blockquote>
+<p>由于官方及其他资料在这方面非常详细了，本文不作基础内容的赘述。这里假定读者已经学习了基础的语法，如<code>基础类型</code>、<code>变量声明等</code>……</p>
+</blockquote>
+<h4 id="1-新建ts文件"><a href="#1-新建ts文件" class="headerlink" title="1. 新建ts文件"></a>1. 新建<code>ts</code>文件</h4><p>可以选择在项目的根目录建立<code>src</code>目录，然后新建<code>index.ts</code>文件</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> CallBack = <span class="function">(<span class="params">value?: <span class="built_in">string</span></span>) =&gt;</span> <span class="built_in">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> Config &#123;</span><br><span class="line">    name: <span class="built_in">string</span></span><br><span class="line">    age: <span class="built_in">number</span></span><br><span class="line">    todo?: CallBack</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> Person &#123;</span><br><span class="line"></span><br><span class="line">    init: Config</span><br><span class="line"></span><br><span class="line">    <span class="keyword">constructor</span>(<span class="params">init?: Config</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (init) &#123;</span><br><span class="line">            <span class="keyword">this</span>.init = init;</span><br><span class="line">            <span class="keyword">this</span>.init.todo = init.todo || <span class="function">(<span class="params">(<span class="params">value?: <span class="built_in">string</span></span>) =&gt; &#123;</span></span></span><br><span class="line"><span class="function"><span class="params">                <span class="built_in">console</span>.log(<span class="params">value || 'This person have been created...But nothing todo'</span>)</span></span></span><br><span class="line"><span class="function"><span class="params">            &#125;</span>)</span></span><br><span class="line"><span class="function">        &#125;</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function">    <span class="params">public</span> <span class="params">todoSomething</span><span class="params">()</span> &#123;</span></span><br><span class="line"><span class="function">        // <span class="params">this</span>.<span class="params">init</span>.<span class="params">todo</span><span class="params">()</span>;</span></span><br><span class="line"><span class="function">        <span class="params">this</span>.<span class="params">init</span>.<span class="params">todo</span>(<span class="params">'Hello World. Welcome to learn TypeScript'</span>);</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
+<h4 id="2-配置编译选项tsc、文档生成、头文件等"><a href="#2-配置编译选项tsc、文档生成、头文件等" class="headerlink" title="2. 配置编译选项tsc、文档生成、头文件等"></a>2. 配置编译选项<code>tsc</code>、文档生成、头文件等</h4><figure class="highlight"><table><tr><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">    "tsc": "tsc",</span><br><span class="line">    "dev": "npm run tsc -w",</span><br><span class="line">    "types": "tsc -d --emitDeclarationOnly --allowJs false --declarationDir ./@types",</span><br><span class="line">    "build": "build options...",</span><br><span class="line">    "prepush": "npm run tsc &amp;&amp; npm run types",</span><br><span class="line">    "prepublish": "npm run prepush &amp;&amp; npm run build",</span><br><span class="line">    "typingsdoc": "npx typedoc --out ./typings/doc  ./src/**/*.ts  --module umd"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>其中这块的配置，在<a href="https://shuoit.net/tech-notes/ts-study-part1-1528259629.html">part1</a>提到过，<a href="https://shuoit.net/tech-notes/Allow--declaration-with--allowJs-1546511333.html">包括同时生成头文件并允许js文件输入</a></p>
+<p>这里把新增加的，简要说明下：</p>
+<ul>
+<li>dev: 监听.ts文件改动，实时编译。即增加<code>-w</code>参数可避免手动编译</li>
+<li>prepush: 合并了两个命令，并且<code>git push</code>时，会被触发。以此可强制推送前编译最新代码</li>
+<li>prepublish: 同样合并两个命令，在即将发布上线时使用</li>
+<li>typingsdoc: 生成Api文档。关于这个，不清楚的读者请看这篇文章：<a href="https://shuoit.net/tech-notes/typedoc-notes-1544152560.html">Typedoc使用笔记</a></li>
+</ul>
+<h4 id="3-tslint及tsconfig"><a href="#3-tslint及tsconfig" class="headerlink" title="3. tslint及tsconfig"></a>3. tslint及tsconfig</h4><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">// tslint.json</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"defaultSeverity"</span>: <span class="string">"error"</span>,</span><br><span class="line">  <span class="attr">"extends"</span>: [</span><br><span class="line">    <span class="string">"tslint:recommended"</span>,</span><br><span class="line">    <span class="string">"tslint-config-prettier"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"rules"</span>: &#123;</span><br><span class="line">    <span class="attr">"encoding"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"no-console"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"object-literal-sort-keys"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"interface-name"</span>: [<span class="literal">true</span>, <span class="string">"never-prefix"</span>],</span><br><span class="line">    <span class="attr">"no-unused-expression"</span>: [<span class="literal">true</span>, <span class="string">"allow-fast-null-checks"</span>],</span><br><span class="line">    <span class="attr">"only-arrow-functions"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"no-duplicate-imports"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"no-mergeable-namespace"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"import-spacing"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"interface-over-type-literal"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"new-parens"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"no-shadowed-variable"</span>: [</span><br><span class="line">      <span class="literal">true</span>,</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"class"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"enum"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"function"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"interface"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">"namespace"</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">"typeAlias"</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">"typeParameter"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"variable-name"</span>: <span class="literal">false</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// tsconfig.json</span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"compilerOptions"</span>: &#123;</span><br><span class="line">    <span class="attr">"charset"</span>: <span class="string">"utf8"</span>,</span><br><span class="line">    <span class="attr">"sourceMap"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"target"</span>: <span class="string">"es5"</span>,</span><br><span class="line">    <span class="attr">"moduleResolution"</span>: <span class="string">"node"</span>,</span><br><span class="line">    <span class="attr">"module"</span>: <span class="string">"umd"</span>,</span><br><span class="line">    <span class="attr">"outDir"</span>: <span class="string">"./built"</span>,</span><br><span class="line">    <span class="attr">"experimentalDecorators"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"removeComments"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"preserveConstEnums"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"allowJs"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"include"</span>: [</span><br><span class="line">    <span class="string">"src/**/*"</span></span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"exclude"</span>: [</span><br><span class="line">    <span class="string">"node_modules"</span>,</span><br><span class="line">    <span class="string">"built"</span>,</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="4-测试编译"><a href="#4-测试编译" class="headerlink" title="4. 测试编译"></a>4. 测试编译</h4><p>执行<code>npm run prepush</code>和<code>npm run typingsdoc</code>后。根目录下，应该多了俩目录：</p>
+<p><img src="/img/2019/15469365443647.jpg" alt=""></p>
+<p>Api文档目录</p>
+<p><img src="/img/2019/15469365901446.jpg" alt=""></p>
+<p>如果遵照第一篇的配置，加过<code>prettier</code>大法。会发现<code>src</code>下的源文件也被美美的调整了代码风格</p>
+<p>目前，暂时就这些。后边在整理，总结！！！</p>
+
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> 打赏
+            </a>
+        </div>
+        
+        <div class="post-tags">标签：
+            
+            <a href="/tags/typescript/">TypeScript</a>
+            
+        </div>
+        
+    </article>
+    
+    <p style="text-align: center">本文代表个人观点，内容仅供参考。若有不恰当之处，望不吝赐教！</p>
+    
+    
+    
+    
+        <div class="adsense_post_left">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4837253996935841" data-ad-slot="1712444257"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <div class="adsense_post_right">
+            
+    <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4837253996935841" data-ad-slot="6857083436"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </div>
+        <p>
+            
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-4837253996935841" data-ad-slot="3228829614" data-ad-format="auto" data-full-width-responsive="true"></ins>
+
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        </p>
+    
+
+
+    
+    
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+             */
+            var disqus_config = function () {
+                this.page.url = 'https://shuoit.net/tech-notes/ts-study-part2-1546832521.html';
+                this.page.identifier = 'tech-notes/ts-study-part2-1546832521.html';
+            };
+            (function () { // DON'T EDIT BELOW THIS LINE
+                var d = document, disqus_shortname = 'shuoit', s = d.createElement('script');
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+
+</div>
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about" title="关于">关于</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="帮助">帮助</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="友链">友链</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="地图">地图</a>
+        </p>
+        <p>
+            本站已建立&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbsp天，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">采用知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议创作</a><br>
+            ©2017-<span id="cpYear"></span> 基于&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，主题采用&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，作者&nbsp<a href="https://www.tangkunyin.com" target="_blank" rel="friend">唐先森</a>
+            ，Hosted by <a href="https://coding.net/register?key=bcace447-fa41-4579-9783-86fdf0f723e2" style="font-weight: bold" target="_blank" rel="nofollow">Coding Pages</a>
+        </p>
+    </div>
+</footer>
+<script src="/js/SimpleCore.js"></script>
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input" spellcheck="false" type="text" autocomplete="off" placeholder="请输入查询关键词">
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        SimpleCore.init({
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: {
+                dbPath: '/search.json',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        });
+    });
+</script>
+</body>
+</html>
