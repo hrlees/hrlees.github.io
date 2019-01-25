@@ -9,28 +9,7 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/npm-script-postinstall-1528025660.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/tech-notes/flutter-and-rax-hello-1531130418.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/tech-notes/mrc-and-arc-1528012490.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/tech-notes/url-encoding-iOS-1528012896.html</loc>
+    <loc>https://shuoit.net/tech-notes/what-is-the-npx-1544153760.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -44,7 +23,14 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/extended-attri-in-mac-1528020192.html</loc>
+    <loc>https://shuoit.net/tech-notes/url-encoding-iOS-1528012896.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/tech-notes/flux-study-1528023412.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -52,6 +38,27 @@
   
   <url>
     <loc>https://shuoit.net/others/jsimple-usage-1492480198.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/tech-notes/extended-attri-in-mac-1528020192.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/tech-notes/mrc-and-arc-1528012490.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/tech-notes/react-navigation-1528027186.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -73,13 +80,6 @@
   
   <url>
     <loc>https://shuoit.net/tech-notes/react16-usage-1528027632.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/tech-notes/react-navigation-1528027186.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -142,7 +142,7 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/dealloc-not-work-1528019847.html</loc>
+    <loc>https://shuoit.net/tech-notes/vue-study-notes-1528027974.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -156,13 +156,6 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/iOS-Pointer-1528013230.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://shuoit.net/tech-notes/highlight-webstorm-1528025404.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
@@ -170,7 +163,14 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/vue-study-notes-1528027974.html</loc>
+    <loc>https://shuoit.net/tech-notes/dealloc-not-work-1528019847.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/tech-notes/iOS-Pointer-1528013230.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -205,14 +205,14 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/mixed-coding-between-js-and-ts-1532415903.html</loc>
+    <loc>https://shuoit.net/tech-notes/ipa-command-packaging-1528014752.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/ipa-command-packaging-1528014752.html</loc>
+    <loc>https://shuoit.net/tech-notes/mixed-coding-between-js-and-ts-1532415903.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -226,21 +226,7 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/flux-study-1528023412.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/tech-notes/what-is-the-npx-1544153760.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/tech-notes/pm2-rn-combine-1528026635.html</loc>
+    <loc>https://shuoit.net/tech-notes/flutter-and-rax-hello-1531130418.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -254,21 +240,21 @@
   </url>
   
   <url>
+    <loc>https://shuoit.net/tech-notes/npm-script-postinstall-1528025660.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/tech-notes/pm2-rn-combine-1528026635.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://shuoit.net/tech-notes/typedoc-notes-1544152560.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/humanities/always-refueling-but-never-awards-1547199536.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/humanities/Leave-Beijing-to-Nanjing-1546271894.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -282,7 +268,14 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/create-rn-in-better-way-1528026020.html</loc>
+    <loc>https://shuoit.net/humanities/Leave-Beijing-to-Nanjing-1546271894.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/humanities/always-refueling-but-never-awards-1547199536.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -296,7 +289,7 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/mobx-vs-redux-1528024961.html</loc>
+    <loc>https://shuoit.net/tech-notes/create-rn-in-better-way-1528026020.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -317,14 +310,14 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/property-and-memberVar-in-iOS-1528011307.html</loc>
+    <loc>https://shuoit.net/tech-notes/permalink-optimize-hexo-1528003174.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/permalink-optimize-hexo-1528003174.html</loc>
+    <loc>https://shuoit.net/tech-notes/mobx-vs-redux-1528024961.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -338,7 +331,21 @@
   </url>
   
   <url>
+    <loc>https://shuoit.net/tech-notes/property-and-memberVar-in-iOS-1528011307.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://shuoit.net/tech-notes/use-gulp-to-speed-hexo-1547999542.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://shuoit.net/tech-notes/pushViewController-change-1528013902.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -359,13 +366,6 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/pushViewController-change-1528013902.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://shuoit.net/others/nodeppt-1504692052.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
@@ -380,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/tech-notes/cross-platform-desktop-1528555686.html</loc>
+    <loc>https://shuoit.net/others/WizNote-Uninstall-1528030114.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://shuoit.net/others/WizNote-Uninstall-1528030114.html</loc>
+    <loc>https://shuoit.net/tech-notes/cross-platform-desktop-1528555686.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -415,6 +415,13 @@
   </url>
   
   <url>
+    <loc>https://shuoit.net/help/index.html</loc>
+    
+    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://shuoit.net/app/index.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
@@ -422,7 +429,7 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/timeline/index.html</loc>
+    <loc>https://shuoit.net/links/index.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
@@ -436,14 +443,7 @@
   </url>
   
   <url>
-    <loc>https://shuoit.net/help/index.html</loc>
-    
-    <lastmod>2019-01-21T21:06:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://shuoit.net/links/index.html</loc>
+    <loc>https://shuoit.net/timeline/index.html</loc>
     
     <lastmod>2019-01-21T21:06:14.000Z</lastmod>
     
